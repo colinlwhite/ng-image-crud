@@ -11,4 +11,15 @@ import { RouterOutlet } from '@angular/router';
 })
 export class AppComponent {
   title = 'ng-image-crud';
+
+  selectedFile: File = null;
+
+  onFileSelected(event) {
+    this.selectedFile = event.target.files[0];
+  }
+
+  onUpload() {
+    // Logic to upload the file
+    console.log(this.selectedFile);
+  }
 }
